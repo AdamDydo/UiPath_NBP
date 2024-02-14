@@ -1,0 +1,212 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Chrome_NBP_Download_Rates" this:Chrome_NBP_Download_Rates.fileName="C:\Users\Adam\Downloads\Impel\test.csv" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="url" Type="InArgument(x:String)" />
+    <x:Property Name="fileName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1626,1643</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Chrome_NBP_Download_Rates" sap:VirtualizedContainerService.HintSize="934,1578" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Default="[New Dictionary(Of String,Object )From{&#xA;&#x9;{&quot;name&quot;,&quot;Chrome_NBP_Download_Rates&quot;},&#xA;&#x9;{&quot;startTime&quot;,system.DateTime.Now}&#xA;}]" Name="component" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Print START" sap:VirtualizedContainerService.HintSize="872,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[String.Format(&quot;START - {0}&quot;,&#xA;component(&quot;name&quot;)&#xA;)]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Chrome to download rates from NBP as csv file" sap:VirtualizedContainerService.HintSize="872,1105" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="2ba06704-6fd4-4151-b72f-07903be7aff8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NCheckState DisplayName="Save file under path" sap:VirtualizedContainerService.HintSize="838,888" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="30" Version="V3">
+            <uix:NCheckState.IfExists>
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,671" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NSetText DisplayName="Set file name" sap:VirtualizedContainerService.HintSize="388,162" sap2010:WorkflowViewState.IdRef="NSetText_1" Text="[fileName]" Version="V3">
+                  <uix:NSetText.Target>
+                    <uix:TargetAnchorable CvElementArea="123, 605, 1066, 24" CvType="InputBox" DesignTimeRectangle="136, 609, 1031, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'archiwum_tab_a_2024.csv'" FullSelectorArgument="&lt;wnd aaname='(Nazwa pliku:|File name:)' cls='ComboBox' matching:aaname='regex' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='*' cls='DirectUIHWND' /&gt;&lt;wnd aaname='*:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="ef557c66-cfac-45d0-bb6d-8540e0069c94" InformativeScreenshot="e7bba15632defaadc97b302d8beceeb5.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NSetText.Target>
+                </uix:NSetText>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Save As'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ba06704-6fd4-4151-b72f-07903be7aff8" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CvElementArea="987, 674, 89, 26" CvTextArea="1013, 680, 35, 15" CvTextArgument="Zapisz" CvType="Button" DesignTimeRectangle="987, 674, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' cls='Button' aaname='(Zapisz|Save as)' matching:aaname='regex' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' cls='Button' aaname='(Zapisz|Save as)' matching:aaname='regex' check:text='unchecked' /&gt;" Guid="fefe8017-a989-4134-90c9-e2bfaeeb1e34" InformativeScreenshot="ac6e272479dc0bd6747b280b6e84e7bb.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+                <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DelayAfter="1" DisplayName="Click 'Yes' if replace the file" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2ba06704-6fd4-4151-b72f-07903be7aff8" Timeout="3" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CvElementArea="211, 95, 68, 23" CvTextArea="234, 100, 20, 12" CvType="Button" DesignTimeRectangle="211, 95, 68, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'&amp;Tak'" FullSelectorArgument="&lt;wnd aaname='*' cls='DirectUIHWND' /&gt;&lt;wnd aaname='(Tak|Yes)' cls='Button' matching:aaname='regex' /&gt;" Guid="32c4d0a9-26f5-44f3-8929-8a248cff6a78" InformativeScreenshot="b4c0986202f84a61127f47228c12dc90.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NClick>
+              </Sequence>
+            </uix:NCheckState.IfExists>
+            <uix:NCheckState.IfNotExists>
+              <Throw Exception="[new SystemException(&quot;Chrome 'Save as' window did not appear.&quot; )]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 1200, 720" DesignTimeScaleFactor="1" FriendlyName="'Zapisywanie jako'" Guid="a7deed64-0672-4214-b902-5b7611f51656" InformativeScreenshot="6c3189880b4f0db912e5c4634451f6aa.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable.FuzzySelectorArgument>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </uix:TargetAnchorable.FuzzySelectorArgument>
+              </uix:TargetAnchorable>
+            </uix:NCheckState.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NCheckState>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="868, 0, 1699, 1399" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIsSURBVDhPTVNLaxNhFM1vqJkk0k2XYjOPCoILXwvBhdJkJo9isWIFRfFBLTWNiRV8LEUXogsfrdha2ppaQaF7/9jxnHtnoouPud/9zj333MeUgriNStRGELb4zXCEd/nc3+Q3QzXMMBE3iElRjlLHC8N7qRw1HFjvoBLPGlgPRpZk4wA/mWHdJ7uNkoPlFBFB9RbtVk6iTCJRdiq0t9SSKJnUlsRUZFFgITsIGZR/K0kLEyLlvRJ2EURdK6kakqCQE8RNVBnsdtEXZSukK0HqxDy1mDaJTIHO5AyZGShZR2c8WzXWNydVIANcIcmniU2aTlCrp/j6oYfVR3eM4HB7gKmTbfzaGmLt6RIOtlZx7NQ8fm728Oz5En5s9418XIK6/f7VQ+xv9HGxu4Df354Y+956H3fv38b+l55lHq0Pca5xDTufVoxAsdwDyUvx7vUyLmQLGBF8uLdmJXz/PMClziJ2P67g9OWrRvjyxQMs3rxl7zYFayLH8/bNMupn5tC9fgN/RkObyM5GD48H93CwOURyfp73Po6fvWJqvPnaAylQ41iGRiTWyRPFBHw66pPb/4/cN7OkDZShmg3Mu2Zci9xf+Nz2idlSxXOGGy+SjkAGkCqC1Fwjjzlie+NOcAP9vSiBhgXnpdSmOftk1oj8SIGTO+G/lS4nHfWA0vmoYFfi/4HVG0p6vsIikY8YWyZi1Bebgm0WH7XKDlCAiPQ/0Ccia6avuJK4mgb+AnucuO6/jYvrAAAAAElFTkSuQmCC" InformativeScreenshot="c27e982a2c1dbc4cc6d3e54b54a15296.jpg" Selector="&lt;html app='chrome.exe' title='*' /&gt;" Title="Archiwum kursów średnich – tabela A (CSV, XLS) | Narodowy Bank Polski - Internetowy Serwis Informacyjny" Url="[url]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Print END" sap:VirtualizedContainerService.HintSize="872,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[String.Format(&quot;END - {0} - {1}&quot;,&#xA;component(&quot;name&quot;),&#xA;(now - convert.ToDateTime(component(&quot;startTime&quot;))).ToString.Split(&quot;.&quot;).FirstOrDefault&#xA;)]" />
+  </Sequence>
+</Activity>
